@@ -1,0 +1,72 @@
+/*Tipografia Dancing Sport*/
+@font-face{
+    font-family: DancingS;
+    src:url('../fonts/DancingScript-Regular.otf');
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: DancingS;
+    background: #F0D2C0;
+}
+/*Estilo para barra de navegacion*/
+.navbar{
+    display: flex;
+    background-color: #5b7989;
+    flex-flow: row wrap;
+    align-items: baseline;
+    border-radius: 10px 10px 0 0; 
+}
+/*Estlio para links contenidos en el barra de navegacion*/
+.navbar a{
+    color: white;
+    text-shadow: 1px 2px 2px #02010a;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    flex-grow: 0.15;
+}
+/*estilos para el encabezado*/
+.navbar h1{
+    color: white;
+    text-shadow: 1px 2px 2px #02010a;
+    padding-left: 20px;
+    text-align: left;
+    flex-grow: 8;
+}
+.navbar a:hover{
+    background-color: #ddd;
+    color: blacK;
+    border-radius: 1em 1em 0 0;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section article picture[class='background']{
+    
+}
+.contenido>section>article>picture>img[class="banner"]{
+    width: 100%;
+    padding: 2em 2em 2em 2em;
+    background-color: #82c3a6;
+}
+/*pie de pagina*/
+footer>div[class="footer"]{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #C6d5c5;
+    border-radius: 0 0 10px 10px;
+}
+.footer>div[class^="foot"]{
+    flex-grow: 1;
+    text-align: left;
+    padding: 2em 2em;
+
+}
+.footer>div[class^="foot"]>ul{
+    list-style: none;
+}
