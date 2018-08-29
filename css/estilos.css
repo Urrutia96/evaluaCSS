@@ -41,19 +41,37 @@ body{
     color: blacK;
     border-radius: 1em 1em 0 0;
 }
-.contenedor{
+.contenido{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-section article picture[class='background']{
-    
-}
 .contenido>section>article>picture>img[class="banner"]{
     width: 100%;
     padding: 2em 2em 2em 2em;
     background-color: #82c3a6;
 }
+/*segundo nivel de contenido*/
+div[class="cont-img"]{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 2em 2em 2em 2em;
+    background-color: #d5c75f;
+}
+.cont-img picture {
+    width: 50%;
+    flex-grow: 1;
+    padding: 1em;
+}
+img[class="paisajes"],img[class="retratos"]{
+    width: 100%;
+    position: center;
+}
+/*animaciones de imagenes*/
+
+
 /*pie de pagina*/
 footer>div[class="footer"]{
     display: flex;
