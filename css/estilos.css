@@ -67,10 +67,14 @@ div[class="cont-img"]{
 }
 img[class="paisajes"],img[class="retratos"]{
     width: 100%;
-    position: center;
+    transform: rotate(0deg);
+    transition: transform 1s;
+    
 }
 /*animaciones de imagenes*/
-
+img[class="paisajes"]:hover{
+    transform: rotate(20deg);
+}
 
 /*pie de pagina*/
 footer>div[class="footer"]{
@@ -87,4 +91,36 @@ footer>div[class="footer"]{
 }
 .footer>div[class^="foot"]>ul{
     list-style: none;
+}
+.social-network{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    align-content: space-around;
+}
+.btn-facebook{
+    background-color: #3b5999;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0.25em;
+    border-radius: 10px;
+}
+.btn-twitter{
+    background-color: #55acee;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0.25em;
+    border-radius: 10px;
+    margin-top: 0.5em;
+}
+.btn-insta{
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0.25em;
+    border-radius: 10px;
+    margin-top: 0.5em;
 }
