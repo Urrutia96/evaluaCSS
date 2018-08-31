@@ -1,7 +1,7 @@
 /*Tipografia Dancing Sport*/
 @font-face{
     font-family: DancingS;
-    src:url('../fonts/DancingScript-Regular.otf');
+    src: url('../fonts/DancingScript-Regular.otf');
 }
 *{
     box-sizing: border-box;
@@ -11,22 +11,23 @@ body{
     background: #F0D2C0;
 }
 /*Estilo para barra de navegacion*/
-.navbar{
+header>.navbar{
     display: flex;
-    background-color: #5b7989;
     flex-flow: row wrap;
-    align-items: baseline;
+    align-items: center;
+    background-color: #5b7989;
     border-radius: 10px 10px 0 0; 
 }
 /*Estlio para links contenidos en el barra de navegacion*/
-.navbar a{
+header  .navbar a{
     color: white;
     text-shadow: 1px 2px 2px #02010a;
     padding: 14px 20px;
     text-decoration: none;
     font-size: 1em;
-    text-align: center;
-    flex-grow: 0.15;
+    flex-grow: 1;
+    font-size: 1.25em;
+    
 }
 /*estilos para el encabezado*/
 .navbar h1{
@@ -39,7 +40,10 @@ body{
 .navbar a:hover{
     background-color: #ddd;
     color: blacK;
-    border-radius: 1em 1em 0 0;
+    border-radius: 10px 10px 0 0;
+}
+.contenedor{
+    width: 900px;
 }
 .contenido{
     display: flex;
@@ -53,7 +57,7 @@ body{
     background-color: #82c3a6;
 }
 /*segundo nivel de contenido*/
-div[class="cont-img"]{
+.cont-img {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -65,15 +69,35 @@ div[class="cont-img"]{
     flex-grow: 1;
     padding: 1em;
 }
-img[class="paisajes"],img[class="retratos"]{
+img[class^="img-"]{
     width: 100%;
-    transform: rotate(0deg);
-    transition: transform 1s;
     
 }
+.img-paisajes{
+    border: 2px solid black; 
+    -webkit-filter: drop-shadow(2px 8px 8px #82c3a6);
+    filter: drop-shadow(2px 8px 8px #82c3a6);
+    transform: rotate(0deg);
+    transition: transform 1s;
+}
+
+/*segunda imagen*/
+.img-retratos{
+    transform: translate(20px,-5px);
+    filter: drop-shadow();
+    border: 0;
+    transition-property: filter, boder;
+    transition-duration: 1s, 1s;
+
+}
 /*animaciones de imagenes*/
-img[class="paisajes"]:hover{
+.img-paisajes:hover{
     transform: rotate(20deg);
+}
+
+.img-retratos:hover{
+    filter: drop-shadow(2px 2px 8px #82c3a6);
+    border: 2px solid black;
 }
 
 /*pie de pagina*/
@@ -82,11 +106,12 @@ footer>div[class="footer"]{
     flex-flow: row wrap;
     background-color: #C6d5c5;
     border-radius: 0 0 10px 10px;
+    font-size: 0.75em;
 }
 .footer>div[class^="foot"]{
-    flex-grow: 1;
+    flex-grow: 0.5;
     text-align: left;
-    padding: 2em 2em;
+    padding: 1em 1em;
 
 }
 .footer>div[class^="foot"]>ul{
@@ -123,4 +148,27 @@ footer>div[class="footer"]{
     padding: 0.25em;
     border-radius: 10px;
     margin-top: 0.5em;
+}
+/*@-webkit-keyframes animacionAv{
+ *from{
+ *   border: 2px solid black;
+ *}
+ *to{
+ *   -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+ *}
+ *
+}*/
+@media screen and (max-width: 900px){
+    .navbar,.cont-img, footer>div[class="footer"]{
+        flex-direction: column;
+
+    }
+    .navbar a{
+        justify-content: center;
+        text-align: center; 
+        width: 100%;
+        text-decoration: underline;   
+    }
+    
+   
 }
