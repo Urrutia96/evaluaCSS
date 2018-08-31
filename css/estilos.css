@@ -71,7 +71,6 @@ header  .navbar a{
 }
 img[class^="img-"]{
     width: 100%;
-    
 }
 .img-paisajes{
     border: 2px solid black; 
@@ -90,6 +89,36 @@ img[class^="img-"]{
     transition-duration: 1s, 1s;
 
 }
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 4px;
+    background-color: #d5c75f;
+    padding-bottom: 10px;
+}
+.galeria picture{
+    width: 33.33%;
+    max-width: 33.33;
+    padding: 0 4px;
+    
+}
+.galeria picture:first-child{
+    filter: blur(10px);
+}
+.galeria picture:nth-child(even){
+    filter: grayscale(100%);
+}
+.galeria picture:nth-child(3){
+    filter: sepia(90%);
+}
+/*galeria de imagenes*/
+.img-respo{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+img[class^="img-"]
 /*animaciones de imagenes*/
 .img-paisajes:hover{
     transform: rotate(20deg);
@@ -159,9 +188,20 @@ footer>div[class="footer"]{
  *
 }*/
 @media screen and (max-width: 900px){
-    .navbar,.cont-img, footer>div[class="footer"]{
+    .navbar,.cont-img, footer>div[class="footer"], .galeria{
         flex-direction: column;
 
+    }
+    .contenedor{
+        width: 100%;
+    }
+    .cont-img picture{
+        width: 100%;
+        padding: 10px;
+    }
+    .galeria picture{
+        width: 100%;
+        max-width: 100%;
     }
     .navbar a{
         justify-content: center;
