@@ -147,6 +147,11 @@ img[class^="img-"]{
     font-size: 0.75em;
     width: 100%;
 }
+.correo{
+    color: #2b747e;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
 .footer>div[class^="foot"]{
     flex-grow: 0.5;
     text-align: left;
